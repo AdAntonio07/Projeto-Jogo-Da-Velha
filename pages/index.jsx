@@ -1,8 +1,11 @@
+import Container from '../src/components/container/Container'
+import Header from '../src/components/header/Header'
+
 function HomePage() {
   return (
-    <div>
-      <h1>Jogo da Velha</h1>
-    </div>
+    <Container>
+      <Header />
+    </Container>
   )
 }
 
