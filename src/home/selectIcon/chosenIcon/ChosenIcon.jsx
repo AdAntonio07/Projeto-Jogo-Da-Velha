@@ -4,7 +4,8 @@ import Box from '../../../components/box/Box'
 const BoxAligh = styled.div`
   display: flex;
   align-items: center;
-  gap: 170px;
+  gap: 150px;
+  margin-top: 30px;
 `
 const Column = styled.div`
   text-align: center;

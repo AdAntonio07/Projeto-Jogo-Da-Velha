@@ -27,12 +27,25 @@ const P = styled.p`
     margin-top: 50px;
   }
 `
+const Margin = styled.div`
+  margin-top: -40px;
+
+  @media screen and (max-width: 430px) {
+    margin-top: -25px;
+  }
+`
+
 function Header() {
   return (
-    <AlignItem>
-      <Icon iconName="Title" size="100%" />
-      <P>Criado por Antonio Ferreira</P>
-    </AlignItem>
+    <>
+      <AlignItem>
+        <Icon iconName="Title" size="100%" />
+        <P>Criado por Antonio Ferreira</P>
+      </AlignItem>
+      <Margin>
+        <Icon iconName="githunb" size="30px" link="https://github.com/AdAntonio07" />
+      </Margin>
+    </>
   )
 }
 
