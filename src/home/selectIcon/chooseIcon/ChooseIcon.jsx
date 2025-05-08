@@ -14,41 +14,49 @@ const P = styled.p`
   color: ${(props) => props.theme.colors.purple};
   margin-top: 8px;
   font-size: 20px;
+  font-weight: 600;
 `
 const Column = styled.div`
   text-align: center;
 `
+const BoxIcon = styled(Box)`
+  cursor: pointer;
+`
 
-function ChoosenIcon() {
+function ChoosenIcon({ onSelectIcon, onClick, disabled }) {
+  const handleIconClick = (iconName) => {
+    onSelectIcon(iconName)
+  }
+
   return (
     <>
       <AlighBoxIcon>
         <Column>
-          <Box>
+          <BoxIcon onClick={() => handleIconClick('Triangulo')}>
             <Icon iconName="Triangulo" />
-          </Box>
+          </BoxIcon>
           <P>Triangulo</P>
         </Column>
         <Column>
-          <Box>
+          <BoxIcon onClick={() => handleIconClick('Quadrado')}>
             <Icon iconName="Quadrado" />
-          </Box>
+          </BoxIcon>
           <P>Quadrado</P>
         </Column>
         <Column>
-          <Box>
+          <BoxIcon onClick={() => handleIconClick('Circulo')}>
             <Icon iconName="Circulo" />
-          </Box>
+          </BoxIcon>
           <P>Circulo</P>
         </Column>
         <Column>
-          <Box>
+          <BoxIcon onClick={() => handleIconClick('X')}>
             <Icon iconName="X" />
-          </Box>
+          </BoxIcon>
           <P>X</P>
         </Column>
       </AlighBoxIcon>
-      <Button width="130px" height="50px">
+      <Button onClick={onClick} disabled={disabled} width="130px" height="50px">
         Jogar
       </Button>
     </>
