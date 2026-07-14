@@ -26,16 +26,16 @@ function ChosenIcon({ Play1, Play2 }) {
     <>
       <BoxAligh>
         <Column>
-          <Box size="120px">{Play1 && <Icon iconName={Play1} size="100px" />}</Box>
-          <H2>Play 1</H2>
+          <Box size="120px">{Play1 && <Icon iconName={Play1} size="80px" />}</Box>
+          <H2>Player 1</H2>
         </Column>
         <Column>
-          <Box size="120px">{Play2 && <Icon iconName={Play2} size="100px" />}</Box>
-          <H2>Play 2</H2>
+          <Box size="120px">{Play2 && <Icon iconName={Play2} size="80px" />}</Box>
+          <H2>Player 2</H2>
         </Column>
       </BoxAligh>
-      {!Play1 && <H1>Escolher o icone do Play 1</H1>}
-      {Play1 && !Play2 && <H1>Escolher o icone do Play 2</H1>}
+      {!Play1 && <H1>Escolher o icone do Player 1</H1>}
+      {Play1 && !Play2 && <H1>Escolher o icone do Player 2</H1>}
       {Play2 && <H1>Vamos jogar!</H1>}
     </>
   )
